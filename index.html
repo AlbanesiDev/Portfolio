@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Joaquin Albanesi</title>
+    <base href="/">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Portfolio de Joaquin Alejandro Albanesi">
+    <meta name="keywords" content="Portfolio Joaquin Alejandro Albanesi Desarrollo web front end Angular">
+    <link rel="canonical" href="https://www.albanesidev.com.ar/">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+
+    <div class="section__title">
+        <h2 appFontWeight>Sobre mí</h2>
+    </div>
+    <div class="container" id="about">
+        <div class="about__wrapper">
+            <div class="about__card">
+                <div class="about__card-image">
+                    <img class="svg" src="/assets/icons/start.svg" loading="lazy" alt="Estrella" />
+                </div>
+                <div class="about__card-description">
+                    <p>Front-End Developer</p>
+                    <strong>Joaquin Alejandro Albanesi</strong>
+                </div>
+            </div>
+            <div class="about__description">
+                <div>
+                    <p>
+                        Mi perfil profesional es el de un desarrollador Front-end con dominio de Angular, capaz de
+                        crear interfaces de usuario atractivas y funcionales, siguiendo los principios del diseño “Pixel
+                        Perfect” para asegurar la precisión y la armonía visual de cada elemento.
+                        <br />
+                        <br />
+                        A pesar de no tener experiencia laboral formal, he invertido tiempo en desarrollar proyectos
+                        personales que demuestran mi capacidad y mi interés por el desarrollo web. Me apasiona aprender
+                        y actualizarme constantemente sobre las novedades y tendencias en este campo, así como
+                        perfeccionar mis habilidades técnicas y creativas.
+                        <br />
+                        <br />
+                        Soy una persona autodidacta y proactiva, que disfruta de los retos, la resolución de problemas
+                        y el descubrimiento de nuevas tecnologías. Mi meta es seguir progresando como desarrollador
+                        Front-end y participar en proyectos que se distingan por su calidad y usabilidad.
+                    </p>
+                </div>
+                <button class="btn" id="pdfButton">Descargar CV</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__title reveal-animation">
+        <h2 id="projectsTitle" appFontWeight>PROYECTOS</h2>
+    </div>
+    <div id="projectsWrapper" class="projects__wrapper container-fluid"></div>
+
+    <div class="btn-container">
+        <!-- <button class="btn">Ver más</button> -->
+    </div>
+
+
+    <div class="section__title">
+        <h2 appFontWeight>contacto</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="container-contact">
+
+            <div class="contact__btn">
+                <ng-container *ngFor="let item of socials">
+                    <a [href]="item.url" class="btn-social" target="_blank">
+                        <div class="btn-social-icon">
+                            <img [src]="item.icon" [alt]="item.title" />
+                        </div>
+                        <div class="btn-social-title">
+                            <img src="/assets/icons/arrow_left.svg" alt="" />
+                            <span>{{ item.title }}</span>
+                        </div>
+                    </a>
+                </ng-container>
+            </div>
+
+            <div class="contact__card">
+                <p class="contact__card-description">
+                    Si tiene una consulta general o sobre un proyecto, envíeme un correo
+                    electrónico o rellene el formulario.
+                </p>
+
+                <div class="contact__card-email">
+                    <img src="/assets/icons/arrow_left.svg" alt="" />
+                    <span>
+                        <a class="contact__card-email-link" href="mailto:JoaquinAlbanesiDev@gmail.com">
+                            JoaquinAlbanesiDev&#64;gmail.com
+                        </a>
+                    </span>
+                </div>
+
+                <div class="contact__card-form">
+                    <div class="contact__card-form-error" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="form__error" *ngIf=""></div>
+                    </div>
+
+                    <form [formGroup]="myForm" action="submit">
+                        <div class="input__wrapper">
+                            <input class="input" [class.error]="" type="text" placeholder="Nombre*"
+                                formControlName="name" />
+                            <p class="form__error">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="input__wrapper">
+                            <input class="input" [class.error]="" type="text" placeholder="Correo electrónico*"
+                                formControlName="email" />
+                            <p class="form__error">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="text-area__wrapper">
+                            <textarea class="text-area" [class.error]="" placeholder="Escribe tu mensaje aqui..."
+                                formControlName="message"></textarea>
+                            <p class="form__error">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </form>
+                    <button class="btn" type="button">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

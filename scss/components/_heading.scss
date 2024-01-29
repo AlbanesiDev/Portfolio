@@ -1,0 +1,10 @@
+.section__title {
+  @include font(14vw $font-weight-300);
+  @media (min-width: 1920px) {
+    @include font(268.8px $font-weight-300);
+  }
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: $border-1;
+  padding: 3rem 0;
+}

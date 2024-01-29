@@ -1,0 +1,90 @@
+@import "../abstract/mixins";
+@import "../abstract/animations";
+@import "../variables/transitions";
+
+.projects__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12rem;
+  padding: 6rem 6rem 0 6rem;
+  overflow: hidden;
+  @media (max-width: 1400px) {
+    padding: 3rem 0rem;
+    gap: 6rem;
+  }
+  :nth-child(2n) {
+    flex-direction: row-reverse !important;
+  }
+  .projects__row {
+    @include flex(row, nowrap, space-between, center);
+    @media (max-width: 1400px) {
+      @include flex(column, wrap, center, center);
+    }
+    width: 100%;
+    .projects__description {
+      @include flex(column, nowrap, flex-start, flex-start, $gap-xlg);
+      @include font($font-size-base $font-weight-400);
+      width: 40%;
+      padding: 2rem 4rem;
+      h2 {
+        @include font($font-size-xl $font-weight-700);
+      }
+      &-text {
+        line-height: 140%;
+      }
+      .link {
+        text-decoration: none;
+      }
+      &-links {
+        @include flex(row, nowrap, flex-start, flex-start, $gap-xlg);
+      }
+      @media (max-width: 1400px) {
+        @include flex(column, nowrap, space-between, stretch, $gap-xlg);
+        width: 100%;
+        padding: 2rem 0rem;
+      }
+    }
+    .projects__visual {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      width: 60%;
+      @media (max-width: 1400px) {
+        width: 100%;
+      }
+      border: $border-2;
+      transition: fadeIn 1s linear;
+      overflow: hidden;
+      img {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        object-fit: cover;
+        transition: $transition-card;
+        opacity: 1;
+        &.hovered {
+          opacity: 0;
+        }
+      }
+      .video {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: $transition-card;
+        opacity: 0;
+        &.hovered {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.btn-container {
+  @include flex();
+  padding-bottom: 6rem;
+  button {
+    margin-top: 3rem;
+  }
+}

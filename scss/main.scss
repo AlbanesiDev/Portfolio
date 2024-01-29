@@ -1,0 +1,21 @@
+@import "../scss/variables/colors";
+@import "../scss/variables/fonts";
+@import "../scss/variables/spacing";
+@import "../scss/variables/transitions";
+@import "../scss/base/typography";
+@import "../scss/base/reset";
+@import "../scss/base/grid";
+@import "../scss/abstract/mixins";
+@import "../scss/abstract/animations";
+@import "../scss/components/cursor";
+@import "../scss/components/heading";
+@import "../scss/components/scrollbar";
+@import "../scss/components/input";
+@import "../scss/components/loading";
+@import "../scss/components/buttons";
+@import "../scss/components/about-me";
+@import "../scss/components/projects";
+
+body {
+  background-color: $color-secondary;
+}

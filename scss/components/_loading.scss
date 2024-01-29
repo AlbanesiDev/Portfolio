@@ -1,0 +1,20 @@
+.spinner__loading {
+	-webkit-animation: 2s linear infinite svg-animation;
+	animation: 2s linear infinite svg-animation;
+	max-width: 100px;
+  circle {
+    -webkit-animation: 1.4s ease-in-out infinite both circle-animation;
+    animation: 1.4s ease-in-out infinite both circle-animation;
+    display: block;
+    fill: transparent;
+    stroke: $color-primary;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 280;
+    stroke-width: 10px;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}
+
