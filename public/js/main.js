@@ -10,7 +10,7 @@ const pdfButton = document.getElementById("pdfButton");
 
 async function loadData() {
     try {
-        const response = await fetch("public/assets/json/info.json");
+        const response = await fetch("./assets/json/info.json");
         const data = await response.json();
         studies = data[0].studies;
         projects = data[0].projects;
@@ -76,7 +76,7 @@ function checkWindowSize() {
 }
 // Event listener para el botón del PDF
 pdfButton.addEventListener("click", () => {
-    window.open("/public/assets/pdf/CV_Joaquin-Albanesi.pdf", "_blank");
+    window.open("./assets/pdf/CV_Joaquin-Albanesi.pdf", "_blank");
 });
 
 
