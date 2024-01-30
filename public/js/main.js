@@ -104,15 +104,16 @@ function updateProjects() {
                 </a>
             </div>
         </div>
-        <div class="projects__visual" onmouseenter="playVideo(${i})" onmouseleave="pauseVideo(${i})">
-            <img src="${item.image}" alt="${item.title}" class="">
-            <video class="video" preload="none" muted loop>
+        <div class="projects__visual img-hover" onmouseenter="playVideo(${i})" onmouseleave="pauseVideo(${i})">
+            <img src="${item.image}" alt="${item.title}">
+            <-- <video class="video" preload="none" muted loop>
                 <source src="${item.video}" type="video/mp4" />
-            </video>
+            </video> -->
         </div>
     </div>
     `).join('');
 }
+
 
 
 function playVideo(index) {
