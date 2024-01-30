@@ -51,7 +51,7 @@ function textAreaValidation() {
     if (textArea.length === 0) {
         textAreaError.textContent = "Por favor, ingrese un mensaje.";
         textAreaInput.classList.add("error");
-        return false; 
+        return false;
     } else if (textArea.length < 10 || textArea.length > 300) {
         textAreaError.textContent = "Por favor, ingrese un mensaje entre 10 y 300 caracteres.";
         textAreaInput.classList.add("error");
@@ -65,13 +65,32 @@ function textAreaValidation() {
 
 function sendEmail() {
     var formError = document.getElementById("formError");
+
     var nameValid = nameValidation();
     var emailValid = emailValidation();
     var textAreaValid = textAreaValidation();
+
     if (nameValid && emailValid && textAreaValid) {
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var textArea = document.getElementById("textArea").value;
-        formError.textContent = "";
+
+        fetch('/sendEmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, textArea }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                formError.textContent = "";
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    } else {
+        formError.textContent = "Por favor, complete todos los campos correctamente.";
     }
 }

@@ -1,0 +1,95 @@
+.container-contact {
+    display: flex;
+    height: 100%;
+    padding: $padding-xxl 0;
+
+    .contact__btn {
+        @include flex(row, wrap, flex-start, flex-start, $gap-lg);
+        width: 40%;
+        height: 100%;
+        .btn-social__email {
+            margin-top: $margin-xl;
+            .text {
+                @include font($font-size-md $font-weight-300);
+                opacity: 0.5;
+            }
+        }
+        .btn__email {
+            @include flex(row, nowrap, flex-start, flex-end);
+            margin-top: $margin-md;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            img {
+                width: 2rem;
+            }
+            span {
+                @include font($font-size-md $font-weight-700);
+                margin-left: $margin-md;
+                transition: $transition-main;
+            }
+            &:hover {
+                span {
+                    transform: translateX($margin-lg);
+                }
+            }
+        }
+    }
+
+    .contact__card {
+        @include flex(column, nowrap, space-between, space-between, $gap-xl);
+        width: 60%;
+        height: 100%;
+        border: $border-1;
+        padding: $padding-xl;
+
+        &-description {
+            height: 120px;
+            p {
+                @include font($font-size-lg $font-weight-400);
+                text-wrap: pretty;
+            }
+        }
+
+        &-form {
+            @include flex(column, nowrap, space-between, stretch, $gap-lg);
+
+            span {
+                @include font($font-size-md $font-weight-300);
+                opacity: 0.5;
+            }
+
+            button {
+                width: 100%;
+                border: $border-2;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 1230px) {
+    .container-contact {
+        @include flex(column-reverse, nowrap, space-between, stretch, $gap-xl);
+        .contact__btn {
+            width: 100%;
+        }
+        
+        .contact__card{
+            width: 100%;
+            height: 100%;
+            &-description {
+                p {
+                    @include font($font-size-md $font-weight-400);
+                }
+            }
+        }
+    }
+}
+
+
+.text__error {
+    @include font($font-size-base $font-weight-500);
+    color: $color-accent-red;
+    padding-top: $padding-md;
+    padding-bottom: $padding-lg;
+}

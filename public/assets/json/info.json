@@ -29,8 +29,8 @@
         "stack": "Angular, Sass, Asp.Net Core, SQL Server, MongoDB, Three.js",
         "title": "Apple Store",
         "description": "Apple-store es un e-commerce que ofrece una variedad de productos, desde dispositivos electrónicos hasta accesorios. Algunas de sus funcionalidades son poder iniciar sesión y registrarse con su email o su cuenta de Google y añadir los productos que deseen a su carrito de compras. Además, la aplicación permite ver los productos en 3D, lo que facilita la elección y la comparación. La aplicación también cuenta con internalización i18n, es decir, se adapta al idioma y la moneda del usuario según su ubicación. Por otro lado, los administradores tienen acceso a un panel de control donde pueden ver estadísticas, estados de compras y órdenes, productos y categorías. También pueden gestionar los productos y usuarios de la plataforma.",
-        "image": "/assets/images/projects/apple.webp",
-        "video": "/assets/videos/apple.webm",
+        "image": "/public/assets/images/projects/apple.webp",
+        "video": "/public/assets/videos/test.webm",
         "url_web": "",
         "url_github": "https://github.com/AlbanesiDev/apple-store.client"
       },
@@ -40,8 +40,8 @@
         "stack": "Angular, Sass, Node.js, Express, Typescript",
         "title": "Today's Weather",
         "description": "Today's Weather es una aplicación del clima que permite consultar datos como el clima actual, por intervalos de 3 horas, por días de la semana y datos de la calidad del aire. Esta aplicación es útil para planificar actividades al aire libre, evitar la exposición a contaminantes y estar al tanto de las condiciones meteorológicas en diferentes lugares. Con esta aplicación, puedes acceder a información precisa y actualizada sobre el clima en tu ciudad o en cualquier parte del mundo.",
-        "image": "/assets/images/projects/weather.webp",
-        "video": "/assets/videos/weather.webm",
+        "image": "/public/assets/images/projects/weather.webp",
+        "video": "/public/assets/videos/test.webm",
         "url_web": "https://todays-weather-2023.web.app/",
         "url_github": "https://github.com/AlbanesiDev/Todays-weather"
       },
@@ -51,8 +51,8 @@
         "stack": "Angular, Angular Material, Sass, NgRx, Json server",
         "title": "Codecamp Dashboard",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates doloremque, accusamus impedit quo eum nisi neque, ipsa corrupti tempora ea inventore animi! Impedit nemo rem, officiis odio corporis veritatis?",
-        "image": "/assets/images/projects/dashboard.png",
-        "video": "/assets/videos/dashboard.webm",
+        "image": "/public/assets/images/projects/dashboard.png",
+        "video": "/public/assets/videos/test.webm",
         "url_web": "https://codecamp-dashboard.vercel.app/auth/login",
         "url_github": "https://github.com/AlbanesiDev/Dashboard"
       },
@@ -62,8 +62,8 @@
         "stack": "Html, Sass, Javascript, Bootstrap",
         "title": "Be Faster",
         "description": "BeFaster es un proyecto que ofrece una experiencia de compra en línea para los amantes de la moda urbana. En este proyecto, se ha diseñado una tienda virtual de ropa de estilo streetwear con un catálogo de prendas y accesorios. La plataforma se ha desarrollado con el objetivo de proporcionar una experiencia de compra rápida y sencilla, con un diseño intuitivo y fácil de usar que permite a los usuarios encontrar rápidamente lo que buscan. ¡Explora nuestro sitio web y descubre cómo se podría ver una tienda en línea de moda streetwear!",
-        "image": "/assets/images/projects/befaster.webp",
-        "video": "/assets/videos/befaster.webm",
+        "image": "/public/assets/images/projects/befaster.webp",
+        "video": "/public/assets/videos/test.webm",
         "url_web": "https://befaster-official.vercel.app/",
         "url_github": "https://github.com/AlbanesiDev/BeFaster"
       }

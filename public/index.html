@@ -11,9 +11,9 @@
     <meta name="description" content="Portfolio de Joaquin Alejandro Albanesi">
     <meta name="keywords" content="Portfolio Joaquin Alejandro Albanesi Desarrollo web front end Angular">
     <link rel="canonical" href="https://www.albanesidev.com.ar/">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/public/styles/styles.css">
     <meta name="robots" content="index, follow">
-    <script async src="/js/fontWeightAnimation.js"></script>
+    <script async src="/public/js/fontWeightAnimation.js"></script>
 </head>
 
 <body id="scroll" class="claseDelElemento">
@@ -27,9 +27,9 @@
             <div class="about__wrapper">
                 <div class="about__card">
                     <div class="about__card-image">
-                        <img class="profile" src="/assets/images/profile2.webp" loading="lazy" decoding="async"
+                        <img class="profile" src="/public/assets/images/profile2.webp" loading="lazy" decoding="async"
                             fetchpriority="high" alt="Foto de perfil">
-                        <img class="svg" src="/assets/icons/star.svg" loading="lazy" alt="Estrella">
+                        <img class="svg" src="/public/assets/icons/star.svg" loading="lazy" alt="Estrella">
                     </div>
                     <div class="about__card-description">
                         <p>Front-End Developer</p>
@@ -211,7 +211,9 @@
         <div class="section__title reveal-animation">
             <h2 id="projectsTitle" appFontWeight>PROYECTOS</h2>
         </div>
-        <div id="projectsWrapper" class="projects__wrapper container-fluid"></div>
+
+        <div id="projectsWrapper" class="projects__wrapper container-fluid">
+        </div>
 
         <div class="btn-container">
             <!-- <button class="btn">Ver más</button> -->
@@ -233,7 +235,7 @@
                             </svg>
                         </div>
                         <div class="btn-social__text">
-                            <img src="/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
+                            <img src="/public/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
                             <span>
                                 Github
                             </span>
@@ -249,7 +251,7 @@
                             </svg>
                         </div>
                         <div class="btn-social__text">
-                            <img src="/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
+                            <img src="/public/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
                             <span>
                                 LinkedIn
                             </span>
@@ -265,7 +267,7 @@
                             </svg>
                         </div>
                         <div class="btn-social__text">
-                            <img src="/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
+                            <img src="/public/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
                             <span>
                                 WhatsApp
                             </span>
@@ -281,16 +283,16 @@
                             </svg>
                         </div>
                         <div class="btn-social__text">
-                            <img src="/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
+                            <img src="/public/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha">
                             <span>
                                 Instagram
                             </span>
                         </div>
                     </a>
                     <div class="btn-social__email">
-                        <span class="text">If you prefer email</span>
+                        <span class="text">Si lo prefiere por correo electrónico.</span>
                         <a class="btn__email" href="mailto:JoaquinAlbanesiDev@gmail.com" target="_blank">
-                            <img src="/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha" />
+                            <img src="/public/assets/icons/arrow_left.svg" alt="Flecha abajo con punta a la derecha" />
                             <span>
                                 JoaquinAlbanesiDev&#64;gmail.com
                             </span>
@@ -308,18 +310,21 @@
                     </div>
 
                     <div class="contact__card-form">
-                        <span>Introduzca sus datos</span>
+                        <span>Introduzca sus datos.</span>
                         <form>
                             <div class="input__wrapper">
-                                <input class="input" type="text" placeholder="Nombre*" id="name" oninput="nameValidation()"/>
+                                <input class="input" type="text" placeholder="Nombre*" id="name"
+                                    oninput="nameValidation()" />
                                 <p class="text__error" id="nameError"></p>
                             </div>
                             <div class="input__wrapper">
-                                <input class="input" type="text" placeholder="Correo electrónico*" id="email" oninput="emailValidation()" />
+                                <input class="input" type="text" placeholder="Correo electrónico*" id="email"
+                                    oninput="emailValidation()" />
                                 <p class="text__error" id="emailError"></p>
                             </div>
                             <div class="text-area__wrapper">
-                                <textarea class="text-area" placeholder="Escribe tu mensaje aqui..." id="textArea" oninput="textAreaValidation()"></textarea>
+                                <textarea class="text-area" placeholder="Escribe tu mensaje aqui..." id="textArea"
+                                    oninput="textAreaValidation()"></textarea>
                                 <p class="text__error" id="textAreaError"></p>
                             </div>
                             <button class="btn" type="button" onclick="sendEmail()">Enviar</button>
@@ -335,10 +340,10 @@
                 href="https://github.com/AlbanesiDev/Portfolio-2024" target="_blank">portfolio</a></p>
     </footer>
 
-    <script async src="/js/main.js"></script>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script async src="/js/cursor.js"></script>
-    <script async src="/js/form.js"></script>
+    <script async src="/public/js/cursor.js"></script>
+    <script async src="/public/js/main.js"></script>
+    <script async src="/public/js/form.js"></script>
 </body>
 
 </html>
