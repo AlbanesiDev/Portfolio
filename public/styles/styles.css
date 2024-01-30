@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'red-hat-display';
-  src: url("/public/assets/font/red-hat-display.ttf") format("truetype"); }
+  src: url("../../assets/font/red-hat-display.ttf") format("truetype"); }
 
 *, *:before, *:after {
   box-sizing: border-box; }
