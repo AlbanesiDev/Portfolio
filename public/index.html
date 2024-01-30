@@ -13,12 +13,14 @@
     <link rel="canonical" href="https://www.albanesidev.com.ar/">
     <link rel="stylesheet" href="/public/styles/styles.css">
     <meta name="robots" content="index, follow">
-    <script async src="/public/js/fontWeightAnimation.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="/public/js/fontWeightAnimation.js"></script>
 </head>
 
-<body id="scroll" class="claseDelElemento">
+<body id="scroll">
     <div class="cursor">
     </div>
+
     <section>
         <div class="section__title">
             <h2 appFontWeight>Sobre mí</h2>
@@ -314,12 +316,12 @@
                         <form>
                             <div class="input__wrapper">
                                 <input class="input" type="text" placeholder="Nombre*" id="name"
-                                    oninput="nameValidation()" />
+                                    oninput="nameValidation()" autocomplete="name" />
                                 <p class="text__error" id="nameError"></p>
                             </div>
                             <div class="input__wrapper">
                                 <input class="input" type="text" placeholder="Correo electrónico*" id="email"
-                                    oninput="emailValidation()" />
+                                    oninput="emailValidation()" autocomplete="email" />
                                 <p class="text__error" id="emailError"></p>
                             </div>
                             <div class="text-area__wrapper">
@@ -340,10 +342,8 @@
                 href="https://github.com/AlbanesiDev/Portfolio-2024" target="_blank">portfolio</a></p>
     </footer>
 
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script async src="/public/js/cursor.js"></script>
     <script async src="/public/js/main.js"></script>
     <script async src="/public/js/form.js"></script>
+    <script async src="/public/js/cursor.js"></script>
 </body>
-
 </html>

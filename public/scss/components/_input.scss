@@ -4,6 +4,7 @@
   background-color: transparent;
   border: $border-input;
   transition: $transition-main;
+  cursor: none;
   &:focus {
     outline: none;
     border: $border-input-hover;

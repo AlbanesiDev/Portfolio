@@ -84,7 +84,6 @@ function sendEmail() {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 formError.textContent = "";
             })
             .catch(error => {
