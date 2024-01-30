@@ -4,7 +4,7 @@ $color-secondary: #0b0a0a;
 $color-tertiary: #616161;
 
 // Accent
-$color-accent-red: #FF7070;
+$color-accent-red: #ff6464;
 $color-accent-green: #0b0a0a;
 
 // Fonts
@@ -23,3 +23,5 @@ $color-btn-link-active: rgba(255, 106, 0, 1);
 // Border
 $border: 1px solid $color-primary;
 $border-card: 2px solid $color-primary;
+$border-input: 2px solid rgba(227, 247, 247, 0.5);
+$border-input-hover: 2px solid $color-primary;

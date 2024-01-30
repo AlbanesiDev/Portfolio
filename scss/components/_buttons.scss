@@ -7,15 +7,18 @@
   padding: 0.25rem 2rem;
   transition: $transition-main;
   cursor: none;
+
   &:hover {
     background-color: $color-btn-hover;
     color: $color-font-secondary;
   }
+
   &:active {
     background-color: $color-btn-active;
     color: $color-font-secondary;
   }
 }
+
 .btn {
   @include btn-style();
   min-width: 10rem;
@@ -32,6 +35,7 @@
   background-color: $color-btn-link;
   color: $color-primary;
   cursor: none;
+
   &::after {
     content: "";
     display: block;
@@ -44,11 +48,13 @@
     transform: translateX(-50%);
     transition: $transition-main;
   }
+
   &::before {
     content: "";
     display: block;
     position: absolute;
   }
+
   div {
     @include flex;
     gap: $gap-md;
@@ -57,6 +63,7 @@
     min-width: 100%;
     height: 100%;
     overflow: hidden;
+
     &::after {
       content: "";
       position: absolute;
@@ -71,14 +78,17 @@
       border-radius: 50%;
     }
   }
+
   &:hover {
     div::after {
       transform: translate(50%, -50%) scale(1);
     }
   }
+
   &:hover::after {
     width: 100%;
   }
+
   &:active {
     div::after {
       background: $color-btn-link-active;
@@ -87,45 +97,60 @@
 }
 
 .btn-social {
-  @include flex(column, wrap, space-between, space-between);
-  text-decoration: none;
-  padding: $padding-xl;
+  @include flex(column, nowrap, space-between, flex-start);
+  min-width: 200px;
+  width: calc(100% / 2 - 1rem);
+  height: 220px;
   border: $border-1;
-  cursor: none;
-  &-icon {
-    @include flex();
-    width: 5vw;
-    height: 5vw;
-    background-color: $color-font-secondary;
-    border: $border-1;
-    border-radius: 50%;
+  padding: $padding-lg;
+  text-decoration: none;
+  .btn-social__icon, svg, span {
     transition: $transition-main;
-    padding: 1.25rem;
-    img {
-      transition: $transition-main;
-      width: 100%;
-      padding: 0.5rem;
+  }
+  .btn-social__icon {
+    @include flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: $border-1;
+    margin-bottom: $margin-lg;
+
+    svg {
+      fill: $color-primary;
+      stroke: $color-primary;
+      width: 2rem;
+      height: 2rem;
     }
   }
-  &-title {
+  .btn-social__text {
     @include flex(row, nowrap, flex-start);
-    @include font($font-size-lg $font-weight-300);
+    width: 100%;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
     span {
-      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-      transform: translateX(0px);
-      padding-left: 1rem;
+      @include font($font-size-base $font-weight-500);
+      align-self: flex-end;
+      line-height: 120%;
+      margin-left: $margin-sm;
+      margin-right: $margin-lg;
     }
   }
   &:hover {
-    span {
-      transform: translateX(20px);
-    }
-    .btn-social-icon {
-      background-color: $color-btn-hover;
-      img {
-        filter: invert(100%) sepia(0%) saturate(0%);
+    .btn-social__icon {
+      background-color: $color-primary;
+      svg {
+        filter: invert(1);
       }
     }
+    span {
+      transform: translateX($margin-lg);
+    }
+  }
+  @media screen and (max-width: 1230px) {
+    height: 100%;
+    width: calc(100% / 2 - 0.5rem);
   }
 }
 

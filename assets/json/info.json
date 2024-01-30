@@ -1,28 +1,5 @@
 [
   {
-    "description": [
-      "Mi perfil profesional es el de un desarrollador Front-end con dominio de Angular, capaz de crear interfaces de usuario atractivas y funcionales, siguiendo los principios del diseño “Pixel Perfect” para asegurar la precisión y la armonía visual de cada elemento.",
-      "A pesar de no tener experiencia laboral formal, he invertido tiempo en desarrollar proyectos personales que demuestran mi capacidad y mi interés por el desarrollo web. Me apasiona aprender y actualizarme constantemente sobre las novedades y tendencias en este campo, así como perfeccionar mis habilidades técnicas y creativas.",
-      "Soy una persona autodidacta y proactiva, que disfruta de los retos, la resolución de problemas y el descubrimiento de nuevas tecnologías. Mi meta es seguir progresando como desarrollador Front-end y participar en proyectos que se distingan por su calidad y usabilidad."
-    ],
-    "personal": [
-      {
-        "name": "Nombre",
-        "value": "Joaquin Alejandro Albanesi"
-      },
-      {
-        "name": "Edad",
-        "value": "21 Años"
-      },
-      {
-        "name": "Ubicación",
-        "value": "Argentina, Buenos Aires, Lomas del Mirador"
-      },
-      {
-        "name": "Idiomas",
-        "value": "Español nativo / Inglés básico"
-      }
-    ],
     "studies": [
       {
         "name": "Carrera de desarrollo Front-End Angular",
@@ -43,80 +20,6 @@
         "name": "Técnico Electromecánico",
         "institute": "E.S.T.N. N° 12 'Italia'",
         "value": "2014 - 2021 (Finalizado)"
-      }
-    ],
-    "experience": [
-      {
-        "name": "Desarrollador Web",
-        "company": "Freelance",
-        "value": "2023 - Actualidad"
-      },
-      {
-        "name": "Plomero de obras",
-        "company": "Galdo Tesisler S.A.",
-        "value": "2022 - 2023"
-      },
-      {
-        "name": "Electricista Matriculado",
-        "company": "Autónomo",
-        "value": "2021 - 2022"
-      }
-    ],
-    "skills": [
-      {
-        "name": "Angular",
-        "value": "Intermedio",
-        "percentage": 60
-      },
-      {
-        "name": "Typescript",
-        "value": "Intermedio",
-        "percentage": 55
-      },
-      {
-        "name": "Asp.Net Core",
-        "value": "Básico",
-        "percentage": 25
-      },
-      {
-        "name": "Node.js",
-        "value": "Básico",
-        "percentage": 22
-      },
-      {
-        "name": "SQL Server",
-        "value": "Básico",
-        "percentage": 25
-      },
-      {
-        "name": "Git",
-        "value": "Intermedio",
-        "percentage": 60
-      },
-      {
-        "name": "Css | SaSS",
-        "value": "Avanzado",
-        "percentage": 85
-      },
-      {
-        "name": "Bootstrap",
-        "value": "Avanzado",
-        "percentage": 90
-      },
-      {
-        "name": "Angular Material",
-        "value": "Intermedio",
-        "percentage": 50
-      },
-      {
-        "name": "Three.js",
-        "value": "Intermedio",
-        "percentage": 45
-      },
-      {
-        "name": "Firebase",
-        "value": "Básico",
-        "percentage": 30
       }
     ],
     "projects": [
@@ -164,29 +67,6 @@
         "url_web": "https://befaster-official.vercel.app/",
         "url_github": "https://github.com/AlbanesiDev/BeFaster"
       }
-    ],
-    "social": [
-        {
-          "title": "Github",
-          "icon": "/assets/icons/github.svg",
-          "url": "https://github.com/albanesidev"
-        },
-        {
-          "title": "LinkedIn",
-          "icon": "/assets/icons/linkedin.svg",
-          "url": "https://www.linkedin.com/in/joaquin-albanesi/"
-        },
-        {
-          "title": "WhatsApp",
-          "icon": "/assets/icons/whatsapp.svg",
-          "url": "https://api.whatsapp.com/send/?phone=1164681728"
-        },
-        {
-          "title": "Instagram",
-          "icon": "/assets/icons/instagram.svg",
-          "url": "https://www.instagram.com/joaquin.albanesi/"
-        }
-    ],
-    "footer": " © Copyright 2024 |  Joaquin Alejandro Albanesi |  Repositorio del "
+    ]
   }
 ]

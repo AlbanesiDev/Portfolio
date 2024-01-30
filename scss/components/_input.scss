@@ -2,10 +2,11 @@
   @include font($font-size-md $font-weight-400);
   padding: $padding-sm $padding-md;
   background-color: transparent;
-  border: $border-2;
+  border: $border-input;
   transition: $transition-main;
   &:focus {
     outline: none;
+    border: $border-input-hover;
   }
 }
 

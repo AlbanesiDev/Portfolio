@@ -21,6 +21,12 @@ footer, header, nav, section, main{
 body{
   line-height: 1;
   scrollbar-gutter: stable;
+  background-color: $color-secondary;
+  cursor: none;
+}
+
+a, button{
+  cursor: none;
 }
 
 ol, ul{
