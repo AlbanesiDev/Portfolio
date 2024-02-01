@@ -64,6 +64,13 @@ function textAreaValidation() {
 }
 
 function sendEmail() {
+    const sendButton = document.getElementById("sendButton");
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalTextSpan = document.getElementById("modalTextSpan");
+    const modalIconSuccess = document.getElementById("modalIconSuccess");
+    const modalIconError = document.getElementById("modalIconError");
+
     let nameValid = nameValidation();
     let emailValid = emailValidation();
     let textAreaValid = textAreaValidation();
@@ -77,17 +84,28 @@ function sendEmail() {
             email,
             textArea
         }
+        sendButton.classList.add("disabled");
+        setTimeout(() => {
+            sendButton.classList.remove("disabled");
+        }, 10000);
 
         let xhr = new XMLHttpRequest();
         xhr.open('POST', '/api/sendEmail', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function() {
-            if (xhr.responseText === 'success') {
-                alert('Tu mensaje ha sido enviado');
-                name.value = "";
-                email.value = "";
-                textArea.value = "";
-                console.log('success');
+            if (xhr.status === 200) {
+                modal.style.display = 'block';
+                modalTitle.textContent = '¡Mensaje enviado exitosamente!';
+                modalTextSpan.textContent = 'En breve estaré en contacto con usted.';
+                modalIconSuccess.classList.add('active');
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("textArea").value = "";
+            } else {
+                modal.style.display = 'block';
+                modalTitle.textContent = 'Error al enviar el correo';
+                modalTextSpan.textContent = 'Por favor, inténtelo de nuevo en unos minutos.';
+                modalIconError.classList.add('active');
             }
         }
         xhr.send(JSON.stringify(formData));

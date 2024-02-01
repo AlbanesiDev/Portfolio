@@ -7,6 +7,7 @@ let isMobile = false;
 const studiesContainer = document.getElementById("studiesContainer");
 const skillsContainer = document.getElementById("skillsContainer");
 const pdfButton = document.getElementById("pdfButton");
+const modal = document.getElementById("modal");
 
 async function loadData() {
     try {
@@ -114,7 +115,9 @@ function updateProjects() {
     `).join('');
 }
 
-
+function closeModal(){
+    modal.style.display = 'none';
+}
 
 function playVideo(index) {
 

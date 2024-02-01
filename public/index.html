@@ -9,7 +9,8 @@
     <base href="/">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta name="description" content="Portfolio de Joaquin Alejandro Albanesi">
-    <meta name="keywords" content="Portfolio, Joaquin, Alejandro, Albanesi, AlbanesiDev, Desarrollo web, front end, Angular, Joaquin Albanesi">
+    <meta name="keywords"
+        content="Portfolio, Joaquin, Alejandro, Albanesi, AlbanesiDev, Desarrollo web, front end, Angular, Joaquin Albanesi">
     <link rel="canonical" href="https://www.albanesidev.com.ar/">
     <link rel="stylesheet" href="./css/styles.css">
     <meta name="robots" content="index, follow">
@@ -20,13 +21,15 @@
 <body id="scroll">
     <div class="cursor">
         <svg class="cursor-link" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z" fill="black"/>
+            <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z" fill="black" />
         </svg>
         <svg class="cursor-size" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.4 13L11 11.6L20.6 2H12V0H24V12H22V3.4L12.4 13Z" fill="black"/>
-            <path d="M11.6 11L13 12.4L3.4 22H12V24H0V12H2V20.6L11.6 11Z" fill="black"/>
+            <path d="M12.4 13L11 11.6L20.6 2H12V0H24V12H22V3.4L12.4 13Z" fill="black" />
+            <path d="M11.6 11L13 12.4L3.4 22H12V24H0V12H2V20.6L11.6 11Z" fill="black" />
         </svg>
     </div>
+
+
 
     <section>
         <div class="section__title">
@@ -336,7 +339,7 @@
                                     oninput="textAreaValidation()"></textarea>
                                 <p class="text__error" id="textAreaError"></p>
                             </div>
-                            <button class="btn" type="button" onclick="sendEmail()">Enviar</button>
+                            <button class="btn" type="button" onclick="sendEmail()" id="sendButton">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -345,11 +348,62 @@
     </section>
 
     <footer class="footer">
-        <p> © Copyright 2024 | Joaquin Alejandro Albanesi | Repositorio del <a href="https://github.com/AlbanesiDev/Portfolio" target="_blank">portfolio</a></p>
+        <p> © Copyright 2024 | Joaquin Alejandro Albanesi | Repositorio del <a
+                href="https://github.com/AlbanesiDev/Portfolio" target="_blank">portfolio</a></p>
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <button class="btn__close" onclick="closeModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
+            </button>
+
+
+            <h2 id="modalTitle"></h2>
+            <span id="modalTextSpan"></span>
+
+
+
+
+            <div class="ui-success" id="modalIconSuccess">
+                <svg viewBox="0 0 87 87" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Group-3" transform="translate(2.000000, 2.000000)">
+                            <circle id="Oval-2" stroke="#A5DC86 " stroke-width="4" cx="41.5" cy="41.5" r="41.5" class="ui-success-circle" ></circle>
+                            <circle id="Oval-2" stroke="rgba(165, 220, 134, 0.2)" stroke-width="4" cx="41.5" cy="41.5" r="41.5"></circle>
+                            <polyline class="ui-success-path" id="Path-2" stroke="#A5DC86" stroke-width="4" points="19 38.8036813 31.1020744 54.8046875 63.299221 28"></polyline>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="ui-error" id="modalIconError">
+                <svg viewBox="0 0 87 87" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Group-2" transform="translate(2.000000, 2.000000)">
+                            <circle id="Oval-2" stroke="rgba(252, 191, 191, .5)" stroke-width="4" cx="41.5" cy="41.5"
+                                r="41.5"></circle>
+                            <circle class="ui-error-circle" stroke="#F74444" stroke-width="4" cx="41.5" cy="41.5"
+                                r="41.5"></circle>
+                            <path class="ui-error-line1" d="M22.244224,22 L60.4279902,60.1837662" id="Line"
+                                stroke="#F74444" stroke-width="3" stroke-linecap="square"></path>
+                            <path class="ui-error-line2" d="M60.755776,21 L23.244224,59.8443492" id="Line"
+                                stroke="#F74444" stroke-width="3" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
 
     <script async src="./js/main.js"></script>
     <script async src="./js/form.js"></script>
     <script async src="./js/cursor.js"></script>
 </body>
+
 </html>

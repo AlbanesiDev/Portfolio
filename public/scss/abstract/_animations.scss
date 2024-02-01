@@ -98,3 +98,53 @@
     transform: rotateZ(360deg);
   }
 }
+@keyframes ani-error-line {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ani-error-circle {
+  0% {
+      stroke-dasharray: 0, 260.75219024795285px;
+      stroke-dashoffset: 0;
+  }
+
+  35% {
+      stroke-dasharray: 120px, 120px;
+      stroke-dashoffset: -120px;
+  }
+
+  70% {
+      stroke-dasharray: 0, 260.75219024795285px;
+      stroke-dashoffset: -260.75219024795285px;
+  }
+
+  100% {
+      stroke-dasharray: 260.75219024795285px, 0;
+      stroke-dashoffset: -260.75219024795285px;
+  }
+}
+@keyframes ani-success-circle {
+  to {
+      stroke-dashoffset: 782.2565707438586px;
+  }
+}
+
+@keyframes ani-success-path {
+  0% {
+      stroke-dashoffset: 62px;
+  }
+
+  65% {
+      stroke-dashoffset: -5px;
+  }
+
+  84% {
+      stroke-dashoffset: 4px;
+  }
+
+  100% {
+      stroke-dashoffset: -2px;
+  }
+}

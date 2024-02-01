@@ -1,6 +1,6 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
 const cors = require('cors');
+const nodemailer = require("nodemailer");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -13,7 +13,7 @@ app.use(cors({
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/../public/index.html');
-})
+});
 
 module.exports = async (req, res) => {
     try {
@@ -36,10 +36,8 @@ module.exports = async (req, res) => {
         res.status(200).json({ success: true, info });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ success: false, error: error.message });
+        res.status(500).json({ success: false, error: error.message, stack: error.stack });
     }
 };
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-})
+app.listen(PORT);
