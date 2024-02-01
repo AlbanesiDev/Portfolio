@@ -39,7 +39,7 @@ function emailValidation() {
 }
 
 function emailRegexValidation(email) {
-    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
 
@@ -64,32 +64,32 @@ function textAreaValidation() {
 }
 
 function sendEmail() {
-    var formError = document.getElementById("formError");
-
-    var nameValid = nameValidation();
-    var emailValid = emailValidation();
-    var textAreaValid = textAreaValidation();
+    let nameValid = nameValidation();
+    let emailValid = emailValidation();
+    let textAreaValid = textAreaValidation();
 
     if (nameValid && emailValid && textAreaValid) {
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var textArea = document.getElementById("textArea").value;
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let textArea = document.getElementById("textArea").value;
+        let formData = {
+            name,
+            email,
+            textArea
+        }
 
-        fetch('/sendEmail', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, textArea }),
-        })
-            .then(response => response.json())
-            .then(data => {
-                formError.textContent = "";
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    } else {
-        formError.textContent = "Por favor, complete todos los campos correctamente.";
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:8000/');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            if (xhr.responseText === 'success') {
+                alert('Tu mensaje ha sido enviado');
+                name.value = "";
+                email.value = "";
+                textArea.value = "";
+                console.log('success');
+            }
+        }
+        xhr.send(JSON.stringify(formData));
     }
 }

@@ -1,0 +1,9 @@
+{
+    "routes": [
+        { "src": "/public/assets/(.*)", "dest": "/public/assets/$1" },
+        { "src": "/public/js/(.*).js", "dest": "/public/js/$1.js" },
+        { "src": "/public/styles/(.*).css", "dest": "/public/styles/$1.css" },
+        { "src": "/public/(.*).(html|ico|txt)", "dest": "/public/$1.$2" },
+        { "src": "/(.*)", "dest": "/public/index.html" }
+    ]
+}
