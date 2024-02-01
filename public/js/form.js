@@ -79,7 +79,7 @@ function sendEmail() {
         }
 
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://www.albanesidev.com.ar/api/sendEmail', true);
+        xhr.open('POST', '/api/sendEmail', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function() {
             if (xhr.responseText === 'success') {
