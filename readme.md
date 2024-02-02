@@ -1,10 +1,9 @@
+<h1 style="font-size: 50px;">My portfolio 2024</h1>
+
 <div style="text-align: center;">
-    <img src="https://raw.githubusercontent.com/AlbanesiDev/Portfolio/main/public/assets/icons/star.svg" width="8%" alt="Star" /><h1 style="font-size: 50px;">My portfolio 2024</h1>
+        <img src="https://raw.githubusercontent.com/AlbanesiDev/Portfolio/main/public/assets/images/readme/mockup-portfolio.png" width="100%" alt="Star" />
 </div>
-<div style="text-align: center;">
-        <img src="https://raw.githubusercontent.com/AlbanesiDev/Portfolio/main/public/assets/images/readme/mockup-portfolio.png" width="80%" alt="Star" />
-</div>
-<hr>
+
 
 ## Built With
 
