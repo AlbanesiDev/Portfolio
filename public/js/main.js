@@ -77,7 +77,7 @@ function checkWindowSize() {
 }
 // Event listener para el botón del PDF
 pdfButton.addEventListener("click", () => {
-    window.open("./assets/pdf/CV_Joaquin-Albanesi.pdf", "_blank");
+    window.open("./assets/pdf/Joaquin_Albanesi_CV.pdf", "_blank");
 });
 
 
@@ -125,6 +125,31 @@ function playVideo(index) {
 
 function pauseVideo(index) {
 
+}
+
+function toggleFullScreen() {
+    let video = document.querySelector('video');
+    if (!document.fullscreenElement) {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.mozRequestFullScreen) { // Firefox
+            video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) { // IE/Edge
+            video.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Firefox
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE/Edge
+            document.msExitFullscreen();
+        }
+    }
 }
 
 // Inicializar la carga de datos al cargar la página
