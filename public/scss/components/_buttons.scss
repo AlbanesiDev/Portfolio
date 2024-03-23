@@ -153,6 +153,9 @@
     height: 100%;
     width: calc(100% / 2 - 0.5rem);
   }
+  @media screen and (max-width: 470px) {
+    width: 100% !important;
+  }
 }
 
 .disabled {

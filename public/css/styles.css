@@ -602,6 +602,11 @@ input {
     width: calc(50% - 0.5rem);
   }
 }
+@media screen and (max-width: 470px) {
+  .btn-social {
+    width: 100% !important;
+  }
+}
 
 .disabled {
   pointer-events: none !important;
@@ -1053,6 +1058,11 @@ input {
 }
 .container-contact .contact__btn .btn__email:hover span {
   transform: translateX(1rem);
+}
+@media (max-width: 500px) {
+  .container-contact .btn__email span {
+    font-size: 1.19rem !important;
+  }
 }
 .container-contact .contact__card {
   display: flex;
