@@ -26,6 +26,17 @@
       {
         "type": "App Web",
         "date": "2024",
+        "stack": "Angular, Typescript, PrimeNG, PrimeFlex, Firebase",
+        "title": "Weather App",
+        "description": "Weather-App es una aplicación meticulosamente diseñada para brindarte información meteorológica precisa y detallada en tiempo real. Te permite acceder a una amplia gama de datos climáticos esenciales, desde la temperatura actual hasta la calidad del aire, con una interfaz intuitiva y funciones personalizables.",
+        "image": "./assets/images/projects/weather.webp",
+        "video": "./assets/videos/test.webm",
+        "url_web": "https://weather-app-2024-albanesi.web.app/",
+        "url_github": "https://github.com/AlbanesiDev/weather-app"
+      },
+      {
+        "type": "App Web",
+        "date": "2024",
         "stack": "Angular, Sass, Asp.Net Core, SQL Server, MongoDB, Three.js",
         "title": "Apple Store",
         "description": "Apple-store es un e-commerce que ofrece una variedad de productos, desde dispositivos electrónicos hasta accesorios. Algunas de sus funcionalidades son poder iniciar sesión y registrarse con su email o su cuenta de Google y añadir los productos que deseen a su carrito de compras. Además, la aplicación permite ver los productos en 3D, lo que facilita la elección y la comparación. La aplicación también cuenta con internalización i18n, es decir, se adapta al idioma y la moneda del usuario según su ubicación. Por otro lado, los administradores tienen acceso a un panel de control donde pueden ver estadísticas, estados de compras y órdenes, productos y categorías. También pueden gestionar los productos y usuarios de la plataforma.",
@@ -33,17 +44,6 @@
         "video": "./assets/videos/test.webm",
         "url_web": "",
         "url_github": "https://github.com/AlbanesiDev/apple-store.client"
-      },
-      {
-        "type": "App Web",
-        "date": "2023",
-        "stack": "Angular, Sass, Node.js, Express, Typescript",
-        "title": "Today's Weather",
-        "description": "Today's Weather es una aplicación del clima que permite consultar datos como el clima actual, por intervalos de 3 horas, por días de la semana y datos de la calidad del aire. Esta aplicación es útil para planificar actividades al aire libre, evitar la exposición a contaminantes y estar al tanto de las condiciones meteorológicas en diferentes lugares. Con esta aplicación, puedes acceder a información precisa y actualizada sobre el clima en tu ciudad o en cualquier parte del mundo.",
-        "image": "./assets/images/projects/weather.webp",
-        "video": "./assets/videos/test.webm",
-        "url_web": "https://todays-weather-2023.web.app/",
-        "url_github": "https://github.com/AlbanesiDev/Todays-weather"
       },
       {
         "type": "App Web | Redesign",
